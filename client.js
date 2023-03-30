@@ -1,19 +1,19 @@
-import sanityClient from "@sanity/client"
-import imageUrlBuilder from '@sanity/image-url';
+import sanityClient from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+
+
 
 export const client = sanityClient({
-    projectId: "j11vxk98",
-    dataset: "production",
-    useCdn: false,
-    apiVersion: "2023-03-29",
-    token: "skzAIrYdpGK6lV0bhr5Wg2J4s4yT4UJZoOvqCwQFdiZKQJWim1mG7vhsW3mCVwYZau45rWQ05bZI9u55kMdXzolEGd5ZMcfUgaya85lCbR8OGEX3hWCeGkGny0eV4uRj1q9LcDpfnAFkjtjGnwTzjQs6rSeC3jBJKnsGNlsr8IFc2uwSLaiI"
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: "production",
+  useCdn: false,
+  apiVersion: "2023-03-29",
+  token: process.env.NEXT_PUBLIC_SANITY_STUDIO_TOKEN,
 });
 
 const builder = imageUrlBuilder(client);
 
-
 export const urlFor = (source) => builder.image(source);
-
 
 // export async function getStaticProps() {
 //     const projects =

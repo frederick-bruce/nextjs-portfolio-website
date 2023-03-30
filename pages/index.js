@@ -29,14 +29,14 @@ export default function Home() {
   );
 }
 
-export async function getServerProps() {
-  const client = sanityClient({
-    projectId: "j11vxk98",
-    dataset: "production",
-    useCdn: false,
-    apiVersion: "2023-03-29",
-  });
-  const query = `*[type == "home"]`;
-  const home = await client.fetch(query);
-  return home;
-}
+// export async function getServerProps() {
+//   const client = sanityClient({
+//     projectId: "j11vxk98",
+//     dataset: "production",
+//     useCdn: false,
+//     apiVersion: "2023-03-29",
+//   });
+//   const query = `*[type == "home"]`;
+//   const home = await client.fetch(query);
+//   return home;
+// }
