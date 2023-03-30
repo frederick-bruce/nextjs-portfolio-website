@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-2xl;
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
+
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#1e7f94] to-[#0e3a43] text-white;
+  }
+
+  a {
+    @apply flex justify-between
+  }
+}
+
+@layer components {
+  .project-portfolio{
+    @apply flex justify-center items-center
+  }
+  .project-item {
+    @apply h-[300px] w-[300px] flex flex-col m-8 p-4 rounded-lg bg-white text-black cursor-pointer
+  }
+  .project-item:hover {
+    @apply shadow-xl cursor-pointer bg-gradient-to-r from-[#1e7f94] to-[#0e3a43] text-white
+  }
+  .project-filter {
+    @apply flex flex-row items-center flex-wrap mt-2 mr-0 mb-8 justify-between
+  }
+  .project-filter-item {
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl cursor-pointer text-[#000] font-bold bg-[#ecf0f3]
+  }
+  .project-filter-item:hover {
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
+  }
+  .project-filter-item:active {
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
+  }
+  .project-img {
+    @apply w-full h-[15rem] relative
+  }
+  img {
+    @apply w-full h-full rounded-lg object-cover
+  }
+  .project {
+    @apply flex-row justify-between inline-flex
+  }
+  .project-links {
+    @apply flex flex-row justify-between
+  }
+
+}
