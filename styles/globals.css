@@ -47,10 +47,10 @@
   .project-portfolio{
     @apply flex justify-center items-center
   }
-  .project-item {
+  .project-card-item {
     @apply h-[300px] w-[300px] flex flex-col m-8 p-4 rounded-lg bg-white text-black cursor-pointer
   }
-  .project-item:hover {
+  .project-card-item:hover {
     @apply shadow-xl cursor-pointer bg-gradient-to-r from-[#1e7f94] to-[#0e3a43] text-white
   }
   .project-filter {
@@ -65,7 +65,7 @@
   .project-filter-item:active {
     @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
   }
-  .project-img {
+  .project-card-img {
     @apply w-full h-[15rem] relative
   }
   img {
@@ -74,7 +74,7 @@
   .project {
     @apply flex-row justify-between inline-flex
   }
-  .project-links {
+  .project-card-links {
     @apply flex flex-row justify-between
   }
 

@@ -68,19 +68,19 @@ const Projects = () => {
           className="project-portfolio"
         >
           {filterProject.map((project, index) => (
-            <div className="project-item" key={index}>
-              <div className="project-img">
+            <div className="project-card-item" key={index}>
+              <div className="project-card-img">
                 <img src={urlFor(project.imgUrl)} alt={project.name} />
               </div>
 
               <div className="bold-text mx-auto my-2 p-2">
                 <h3>{project.title}</h3>
               </div>
-              <div className="project-links">
+              <div className="project-card-links">
 
-              <div className="project">
+              <div className="project-portfolio">
                 <Link
-                  href= {{pathname:project.projectPage}}
+                  href={{pathname:project.projectPage}}
                   target="_blank"
                   rel="noreferrer"
                   >
@@ -89,7 +89,7 @@ const Projects = () => {
               </div>
               <div>
                 <Link href={{ pathname:project.codeLink}} target="_blank" rel="noreferrer">
-                  <div className="project">
+                  <div className="project-card-links">
                     <AiFillGithub size={28} />
                   </div>
                 </Link>
