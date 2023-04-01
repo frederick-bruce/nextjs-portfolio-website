@@ -1,3 +1,5 @@
+// const { transform } = require('framer-motion')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,5 +11,18 @@ module.exports = {
     extend: {
     },
   },
-  plugins: [],
-};
+  // plugins: [
+  //   plugin(function ({ addComponents, }) {
+  //     addComponents({
+  //       '.card-container': {
+  //         transition,
+  //         transform: 1,
+  //       },
+  //       ".card-container.flipped": {
+  //         transition,
+  //         transform: rotateY(180),
+  //       },
+  //     })
+  //   })
+  // ]
+}

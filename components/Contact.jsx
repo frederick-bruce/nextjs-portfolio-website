@@ -9,7 +9,7 @@ import ContactImg from "../public/assets/contact.jpg";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen pt-32">
+    <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full h-full">
         <p className="text-xl tracking-widest uppercase text-[#27a2bd]">
           Contact

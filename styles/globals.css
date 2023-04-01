@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap");
-
+@import "animate.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,9 +26,9 @@
     @apply text-3xl sm:text-4xl;
   }
 
-  h3 {
+  /* h3 {
     @apply text-2xl sm:text-2xl;
-  }
+  } */
 
   li {
     @apply cursor-pointer;
@@ -39,43 +39,89 @@
   }
 
   a {
-    @apply flex justify-between
+    @apply flex justify-between;
   }
 }
 
 @layer components {
-  .project-portfolio{
-    @apply flex justify-center items-center
+  /* .container {
+    @apply grid grid-rows-3  place-items-center mx-auto;
+  } */
+  .project-portfolio {
+    @apply flex flex-row justify-center items-center;
   }
   .project-card-item {
-    @apply h-[300px] w-[300px] flex flex-col m-8 p-4 rounded-lg bg-white text-black cursor-pointer
+    @apply rounded-lg rounded-bl-none rounded-br-none bg-transparent text-black cursor-pointer;
   }
   .project-card-item:hover {
-    @apply shadow-xl cursor-pointer bg-gradient-to-r from-[#1e7f94] to-[#0e3a43] text-white
+    @apply shadow-xl cursor-pointer bg-gradient-to-r from-[#1e7f94] to-[#0e3a43] text-white;
   }
   .project-filter {
-    @apply flex flex-row items-center flex-wrap mt-2 mr-0 mb-8 justify-between
+    @apply flex flex-row items-center flex-wrap mt-2 mr-0 mb-8 justify-between;
   }
+  /* .project-filter:active {
+    @apply flex flex-row items-center flex-wrap mt-2 mr-0 mb-8 justify-between bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
+  }  */
   .project-filter-item {
-    @apply py-2 px-4 m-2 rounded-lg shadow-xl cursor-pointer text-[#000] font-bold bg-[#ecf0f3]
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl cursor-pointer text-[#000] font-bold bg-[#ecf0f3];
   }
   .project-filter-item:hover {
-    @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl scale-105 shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd];
   }
-  .project-filter-item:active {
+  /* .project-filter-item:active {
     @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
-  }
+  } */
+  /* .project-filter-item:focus-within {
+    @apply py-2 px-4 m-2 rounded-lg shadow-xl shadow-gray-400 cursor-pointer text-[#fff] font-extrabold bg-gradient-to-r from-[#1e7f94] to-[#27a2bd]
+  } */
   .project-card-img {
-    @apply w-full h-[15rem] relative
+    @apply w-full h-[15rem] relative;
   }
   img {
-    @apply w-full h-full rounded-lg object-cover
+    @apply w-full h-full rounded-lg object-cover;
   }
-  .project {
-    @apply flex-row justify-between inline-flex
+  .project-card {
+    @apply flex-row justify-between inline-flex;
   }
   .project-card-links {
-    @apply flex flex-row justify-between
+    @apply flex flex-row justify-between;
   }
-
+  .card-flip {
+    @apply rotate-180;
+  }
+  .arrow-icon:hover {
+    @apply scale-150;
+  }
+  /* .card-container {
+    @apply transition-transform duration-1000;
+  }
+  .card-container.flipped {
+    @apply transform-rotate-y-180;
+  } */
+  .flip-card {
+    @apply w-[200px] h-[260px];
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    @apply relative w-full h-full transition-transform duration-[0.6s];
+    transform-style: preserve-3d;
+  }
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute w-full h-full;
+    backface-visibility: hidden;
+  }
+  .flip-card-front {
+    @apply bg-[#bbb] text-[black];
+  }
+  .flip-card-back {
+    @apply bg-[#2980b9] text-[white];
+    transform: rotateY(180deg);
+  }
+  button {
+    @apply mt-5;
+  }
 }

@@ -22,10 +22,12 @@
     "link-react": "^3.0.0",
     "next": "13.2.3",
     "react": "18.2.0",
+    "react-card-flip": "^1.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-pdf": "^6.2.2",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
