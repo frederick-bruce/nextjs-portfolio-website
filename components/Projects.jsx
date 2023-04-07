@@ -43,7 +43,7 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#27a2bd]">
           Projects
         </p>
-        <h2 className="py-4">Tech Stacks & Frameworks</h2>
+        <h2 className="py-4">Some things I built</h2>
 
         <div className="project-filter">
           {["React JS", "Next JS", "MERN", "In Development", "All"].map(

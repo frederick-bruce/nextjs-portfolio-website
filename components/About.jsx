@@ -14,8 +14,8 @@ const About = () => {
           </p>
           <h2 className="py-4">Who I am</h2>
           <p className="py-2 text-gray-600">
-            I have 2 years of experience building and designing software.
-            Currently, I love to work on web applications using technologies
+            I have 3 years of experience building and designing software. Currently, I am a WordPress Developer, for a non profit organization.
+            I love to work on web applications using technologies
             like React, Tailwind, Next JS. Building different types of web
             applications has helped me gain knowledge in many of today&apos;s
             popular libraries such as Tailwind and NextJS.
@@ -32,7 +32,7 @@ const About = () => {
             src={AboutImage}
             width={320}
             height={320}
-            alt=""
+            alt="about"
           />
         </div>
       </div>
